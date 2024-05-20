@@ -1,7 +1,7 @@
 # Weighted-blow-up-of-Monomial-ideals
 There is both a notebook, and a python file with code for doing Weighted blow-up of Monomial ideals as described in https://arxiv.org/pdf/1906.07106 by DAN ABRAMOVICH, MICHAEL TEMKIN, AND JAROSLAW WLODARCZYK.
 
-The algorithm used is however constructed concurrently with my Master's thesis (Jonas Holt Pedersen), and it is using methods I could not find anyone else describing, but probably similar to "Newton polyhedra without coordinates" by Boris Youssin.
+The algorithm used is however constructed concurrently with my Master's thesis (Jonas H. Pedersen), and it is using methods I could not find anyone else describing, but probably similar to "Newton polyhedra without coordinates" by Boris Youssin.
 There is no proof as of yet that the invariant produced in this algorithm corresponds to one due to ABRAMOVICH et al. however it seems very likely that these coincide.
 
 Examples of use of the python file:
@@ -21,5 +21,5 @@ if __name__ == "__main__":
         text_file.write(out)
     print(out)
 ```
-In general the code can handle monomial ideal written as a string using "*" between two variables that should be multiplied. Variables can be on any form of letter plus numbers, i.e. "b32" or "x1". No underscores.
+In general the code can only blow up at the origin, but it can handle monomial ideals written as a string using "*" between two variables that should be multiplied. Variables can be on any form of letter plus numbers, i.e. "b32" or "x1". No underscores.
 There is also a notebook, which is easier to play with, but it does not support multicore processing as the python file does.
