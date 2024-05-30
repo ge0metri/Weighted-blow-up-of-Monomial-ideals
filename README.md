@@ -21,5 +21,10 @@ if __name__ == "__main__":
         text_file.write(out)
     print(out)
 ```
+It is also possible to run the code with cmd arguments. For example
+```
+.../speciale-parallel.py outfile --stop_depth 10 ---ideal t**2*x**2,t**3*y
+```
+
 In general the code can only blow up at the origin, but it can handle monomial ideals written as a string using "*" between two variables that should be multiplied. Variables can be on any form of letter plus numbers, i.e. "b32" or "x1". No underscores.
 There is also a notebook, which is easier to play with, but it does not support multicore processing as the python file does.
